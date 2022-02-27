@@ -95,6 +95,7 @@ public class BankMenu {
 	private void createAnAccount() {
 		String firstName;
 		String lastName;
+		String password = "";
 		String accountType = "";
 		double initialDeposit = 0;
 		boolean valid = false;
@@ -146,7 +147,7 @@ public class BankMenu {
 		} else {
 			account = new Savings(initialDeposit);
 		}
-		CustomerDetails customer = new CustomerDetails(firstName, lastName, account);
+		CustomerDetails customer = new CustomerDetails(firstName, lastName, password, account);
 		bank.addCustomer(customer);
 	}
 
